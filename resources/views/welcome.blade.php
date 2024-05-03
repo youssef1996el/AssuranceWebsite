@@ -1749,23 +1749,23 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
             var value = $(this).val();
             if(value == 'Auto')
             {
-                $('#Email').val('Leadsautohproconseil@gmail.com');
+                $('#Email').val('leadsautohproconseil@gmail.com');
             }
             if(value == 'Habitation')
             {
-                $('#Email').val('Leadshabitationhproconseil@gmail.com');
+                $('#Email').val('leadshabitationhproconseil@gmail.com');
             }
             if(value == 'Multuelle santé')
             {
-                $('#Email').val('Leadssantehproconseil@gmail.com');
+                $('#Email').val('leadssantehproconseil@gmail.com');
             }
             if(value == 'RC décennale')
             {
-                $('#Email').val('Leadsdecennalehproconseil@gmail.com');
+                $('#Email').val('leadsdecennalehproconseil@gmail.com');
             }
             if(value == 'Emprunteur')
             {
-                $('#Email').val('Leadsemprunteurhproconseil@gmail.com');
+                $('#Email').val('leadsemprunteurhproconseil@gmail.com');
             }
             if(value == 0)
             {

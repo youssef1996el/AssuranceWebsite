@@ -13,7 +13,7 @@ class MailController extends Controller
 
 
 
-        $toEmail        = 'potebi1681@rehezb.com'; //$request->Email;
+        $toEmail        = $request->Email;/* 'potebi1681@rehezb.com'; */
         $messageBody    = 'first message';
         $subject        = $request->TypeAssurance;
         $fullname       = $request->Fullname;
