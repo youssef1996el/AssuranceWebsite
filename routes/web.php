@@ -14,6 +14,7 @@ use App\Http\Controllers\MailController;
 */
 
 Route::get('/', function () {
+    
     return view('welcome');
 });
 
