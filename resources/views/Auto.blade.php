@@ -82,7 +82,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <style id='insur-style-inline-css'>
 :root {
 
-		}.page-header-bg { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/page-header-bg.jpg); } .preloader .preloader__image { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/08/loader.png); } .page-header-bg { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/page-header-bg.jpg); }
+		}
+        /* .page-header-bg
+        { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/page-header-bg.jpg); }
+         .preloader .preloader__image
+         { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/08/loader.png); }
+         .page-header-bg
+         { background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/page-header-bg.jpg); } */
+         .page-header-bg
+        {  background-image: url("{{ asset('images/assur_auto_premium_banniere.webp') }}");}
+         .preloader .preloader__image
+         { background-image: url("{{ asset('images/assur_auto_premium_banniere.webp') }}");}
+         .page-header-bg
+         { background-image: url("{{ asset('images/assur_auto_premium_banniere.webp') }}");}
 @font-face {
 			font-family: "star";
 			src: url("https://bracketweb.com/insurwp/wp-content/plugins/woocommerce/assets/fonts/star.eot");
@@ -718,7 +730,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 <li id="menu-item-614" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children megamenu-hide menu-item-614"><a href="https://bracketweb.com/insurwp/insurance-01/">Assurance </a>
 <ul class="sub-menu">
 
-	<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-585"><a href="{{url('Auto')}}" aria-current="page">Auto</a></li>
+	<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-585"><a href="{{url('Auto')}}" aria-current="page">Auto/ VTC / TAXI</a></li>
 	<li id="menu-item-855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-855"><a href="{{url('Habitation')}}">Habitation</a></li>
 	<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-850"><a href="{{url('sante')}}">Multuelle santé</a></li>
 	<li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="{{url('rc-decennale')}}">RC décennale</a></li>
@@ -866,14 +878,14 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 </li>
 <li class="post post-page current-item">
     <span property="itemListElement" typeof="ListItem">
-        <span property="name" class="post post-page current-item">Auto</span>
+        <span property="name" class="post post-page current-item">Auto / VTC / TAXI</span>
         <meta property="url" content="https://bracketweb.com/insurwp/car-insurance/">
         <meta property="position" content="2">
     </span>
 </li>
 				</ul>
 									<h2>
-									Auto							</h2>
+									Auto	/ VTC / TAXI						</h2>
 		</div>
 	</div>
 </section>
@@ -885,7 +897,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 						<div class="elementor-element elementor-element-99fddf2 elementor-widget elementor-widget-insur-sidebar" data-id="99fddf2" data-element_type="widget" data-widget_type="insur-sidebar.default">
 				<div class="elementor-widget-container">
 			    <div class="make-a-claim__claim-box">
-        <div class="menu-insur-details-sidebar-container"><ul id="menu-insur-details-sidebar" class="make-a-claim__claim-list list-unstyled ml-0"><li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-1755"><a href="{{url('Auto')}}" aria-current="page">Auto<span class="fa-solid fa-arrow-right"></span></a></li>
+        <div class="menu-insur-details-sidebar-container"><ul id="menu-insur-details-sidebar" class="make-a-claim__claim-list list-unstyled ml-0"><li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-1755"><a href="{{url('Auto')}}" aria-current="page">Auto/ VTC / TAXI<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1756 current"><a href="{{url('Habitation')}}">Habitation<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1757 current"><a href="{{url('sante')}}">Mutuelle Santé<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1759 current"><a href="{{url('decennale')}}">RC Décennale<span class="fa-solid fa-arrow-right"></span></a></li>
@@ -938,6 +950,17 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 				<div class="elementor-element elementor-element-b15081d elementor-widget elementor-widget-insur-icon-box" data-id="b15081d" data-element_type="widget" data-widget_type="insur-icon-box.default">
 				<div class="elementor-widget-container">
 			    <ul class="insurance-details__points list-unstyled ml-0">
+                    <li>
+                        <div class="insurance-details__points-left">
+                            <div class="insurance-details__points-icon insur-icon-svg">
+                                              </div>
+                            <h3 class="insurance-details__points-title">
+                                Conducteur VTC </h3>
+                        </div>
+                        <div class="insurance-details__points-right">
+                            <p>Notre assurance RC Pro VTC couvre les dommages corporels, matériels et immatériels causés à des tiers, y compris vos clients. Obtenez vos attestations immédiatement et bénéficiez des meilleures garanties pour exercer en toute sécurité.</p>
+                        </div>
+                    </li>
                                     <li>
                     <div class="insurance-details__points-left">
                         <div class="insurance-details__points-icon insur-icon-svg">

@@ -715,7 +715,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
         <li id="menu-item-614" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children megamenu-hide menu-item-614"><a href="#">Assurance </a>
             <ul class="sub-menu">
 
-                <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-585"><a href="{{url('Auto')}}" aria-current="page">Auto</a></li>
+                <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-585"><a href="{{url('Auto')}}" aria-current="page">Auto/ VTC / TAXI</a></li>
                 <li id="menu-item-855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-855"><a href="{{url('Habitation')}}">Habitation</a></li>
                 <li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-850"><a href="{{url('sante')}}">Multuelle santé</a></li>
                 <li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="{{url('rc-decennale')}}">RC décennale</a></li>
@@ -869,7 +869,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 						<div class="elementor-element elementor-element-99fddf2 elementor-widget elementor-widget-insur-sidebar" data-id="99fddf2" data-element_type="widget" data-widget_type="insur-sidebar.default">
 				<div class="elementor-widget-container">
 			    <div class="make-a-claim__claim-box">
-        <div class="menu-insur-details-sidebar-container"><ul id="menu-insur-details-sidebar" class="make-a-claim__claim-list list-unstyled ml-0"><li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-1755"><a href="{{url('Auto')}}" aria-current="page">Auto<span class="fa-solid fa-arrow-right"></span></a></li>
+        <div class="menu-insur-details-sidebar-container"><ul id="menu-insur-details-sidebar" class="make-a-claim__claim-list list-unstyled ml-0"><li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-1755"><a href="{{url('Auto')}}" aria-current="page">Auto/ VTC / TAXI<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1756 current"><a href="{{url('Habitation')}}">Habitation<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1757 current"><a href="{{url('sante')}}">Mutuelle Santé<span class="fa-solid fa-arrow-right"></span></a></li>
             <li id="menu-item-1759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1759 current"><a href="{{url('decennale')}}">RC Décennale<span class="fa-solid fa-arrow-right"></span></a></li>
