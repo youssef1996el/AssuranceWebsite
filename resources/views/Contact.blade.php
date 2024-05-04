@@ -473,17 +473,17 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
             </li>
 
 
-            <li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page megamenu-hide menu-item-586"><a href="{{url('Contant')}}">Contact</a></li>
+            <li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page megamenu-hide menu-item-586 current"><a href="{{url('Contant')}}">Contact</a></li>
 </ul></div>								</div>
 								<div class="main-menu__main-menu-box-search-get-quote-btn">
 
-									<div class="main-menu__main-menu-box-search">
+									{{-- <div class="main-menu__main-menu-box-search"> --}}
 																					{{-- <a href="#" class="main-menu__search search-toggler fa-solid fa-magnifying-glass"></a>
 																															<a href="#" class="main-menu__cart fa-solid fa-cart-shopping"></a> --}}
-																			</div>
+																			{{-- </div> --}}
 
 																			<div class="main-menu__main-menu-box-get-quote-btn-box">
-											<a   href="https://bracketweb.com/insurwp/contact/" class="thm-btn main-menu__main-menu-box-get-quote-btn">Get a Quote</a>
+											<a   href="#" class="thm-btn main-menu__main-menu-box-get-quote-btn">Commencer</a>
 										</div>
 																	</div>
 							</div>
@@ -493,7 +493,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 								<div class="main-menu__call-icon insur-icon-svg">
 									<i aria-hidden="true" class="fas fa-phone"></i>								</div>
 																	<div class="main-menu__call-content">
-																					<a href="tel:9200368090"> 0745893083 / 0745893216</a>
+																					<a href="tel:9200368090">0745893216</a>
 																															<p>Appel à nos experts</p>
 																			</div>
 															</div>
@@ -527,9 +527,9 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 	<div class="mobile-nav__content">
 		<span class="mobile-nav__close mobile-nav__toggler"></span>
 
-		<div class="logo-box">
-			<a href="https://bracketweb.com/insurwp/">
-				<img loading="lazy" decoding="async" width="143" height="27" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/logo-light.png" id="mobile-thm-logo" alt="Insur">
+		<div class="logo-box" style="background-color: #fff !important">
+			<a href="{{url('/')}}">
+				<img loading="lazy" decoding="async" width="143" height="27" src="{{asset('images/conseil.png')}}" id="mobile-thm-logo" alt="Insur">
 			</a>
 		</div>
 		<!-- /.logo-box -->
@@ -538,11 +538,11 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 					<ul class="mobile-nav__contact list-unstyled ml-0">
 									<li>
 						<i class="fa fa-envelope"></i>
-						<a href="needhelp@insur.com">needhelp@insur.com</a>
+						<a href="#">contact@hproconseil.fr</a>
 					</li>
 													<li>
 						<i class="fa fa-phone-alt"></i>
-						<a href="tel:666-888-0000">666 888 0000</a>
+						<a href="#">0745893216</a>
 					</li>
 										</ul><!-- /.mobile-nav__contact -->
 			<div class="mobile-nav__top">
@@ -640,7 +640,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                 <i aria-hidden="true" class="fas fa-phone"></i>                            </div>
                             <div class="contact-page__call-email-content">
                                 <h4>
-                                    <a href="tel:9200368090" class="contact-page__call-number">0745893083 / 0745893216</a>
+                                    <a href="tel:9200368090" class="contact-page__call-number">0745893216</a>
                                     <a href="mailto:contact@hproconseil.fr" class="contact-page__email">contact@hproconseil.fr</a>
                                 </h4>
                             </div>
@@ -735,7 +735,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                 <div class="cta-one__call-icon insur-icon-svg">
                                     <i aria-hidden="true" class="fas fa-phone"></i>                                </div>
                                 <div class="cta-one__call-number">
-                                    <a href="tel:9200368090">0745893083 / 0745893216</a>
+                                    <a href="tel:9200368090">0745893216</a>
                                     <p>Appel à nos experts</p>
                                 </div>
                             </div>
@@ -915,7 +915,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 				<div class="footer-widget__phone-icon">
 					<span aria-hidden="true" class="fa-solid fa-phone"></span>				</div>
 				<div class="footer-widget__phone-text">
-					<a href="tel:9200368090">0745893083 / 0745893216</a>
+					<a href="tel:9200368090">0745893216</a>
 					<p>Appel à nos experts </p>
 				</div>
 			</div>

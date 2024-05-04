@@ -213,7 +213,7 @@
                     <p>E-mail :</p>
                 </th>
                 <th>
-                    <p>{{$toEmail}}</p>
+                    <p>{{$emailClient}}</p>
                 </th>
             </tr>
             <tr>
@@ -224,6 +224,16 @@
                     <p>{{$phone}}</p>
                 </th>
             </tr>
+
+            <tr>
+                <th>
+                    <p>Date naissance :</p>
+                </th>
+                <th>
+                    <p>{{$datenaissance}}</p>
+                </th>
+            </tr>
+
             <tr>
                 <th>
                     <p>Type :</p>
@@ -232,6 +242,28 @@
                     <p>{{$subject}}</p>
                 </th>
             </tr>
+
+            <tr>
+                <th>
+                    <p>Code Postal :</p>
+                </th>
+                <th>
+                    <p>{{$codepostal}}</p>
+                </th>
+            </tr>
+
+            <?php if($matricule !== null): ?>
+                <tr>
+                    <th>
+                        <p>Matricule :</p>
+                    </th>
+                    <th>
+                        <p><?php echo $matricule; ?></p>
+                    </th>
+                </tr>
+            <?php endif; ?>
+
+
         </table>
 
 

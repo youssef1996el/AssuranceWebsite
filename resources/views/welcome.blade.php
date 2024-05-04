@@ -448,7 +448,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 											<span aria-hidden="true" class="fa-solid fa-phone-volume"></span>										</div>
 										<div class="text">
 											<h5 style="color: black">Avez-vous des questions?</h5>
-											<p><a href="tel:9200368090" style="color: black">0745893083 / 0745893216</a></p>
+											<p><a href="tel:9200368090" style="color: black"> 0745893216</a></p>
 										</div>
 									</li>
 																	<li>
@@ -744,12 +744,12 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 						</div>
 						<div class="main-menu-two__right">
 							<div class="main-menu-two__search-box-get-quote">
-								<div class="main-menu-two__search-box">
+								{{-- <div class="main-menu-two__search-box"> --}}
 																			{{-- <a href="#" class="main-menu__search search-toggler fa-solid fa-magnifying-glass" style="color: white"></a> --}}
 
-																	</div>
+																	{{-- </div> --}}
 																	<div class="main-menu-two__get-quote">
-										<a   href="https://bracketweb.com/insurwp/contact/" class="thm-btn main-menu-two__get-quote-btn">
+										<a   href="{{url('Contant')}}" class="thm-btn main-menu-two__get-quote-btn">
 											Commencer									</a>
 									</div>
 															</div>
@@ -780,9 +780,9 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 	<div class="mobile-nav__content">
 		<span class="mobile-nav__close mobile-nav__toggler"></span>
 
-		<div class="logo-box">
-			<a href="https://bracketweb.com/insurwp/">
-				<img loading="lazy" decoding="async" width="143" height="27" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/logo-light.png" id="mobile-thm-logo" alt="Insur">
+		<div class="logo-box" style="background-color: #fff !important">
+			<a href="{{url('/')}}">
+				<img loading="lazy" decoding="async" width="143" height="27" src="{{asset('images/conseil.png')}}" id="mobile-thm-logo" alt="Insur">
 			</a>
 		</div>
 		<!-- /.logo-box -->
@@ -791,11 +791,11 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 					<ul class="mobile-nav__contact list-unstyled ml-0">
 									<li>
 						<i class="fa fa-envelope"></i>
-						<a href="needhelp@insur.com">needhelp@insur.com</a>
+						<a href="#">contact@hproconseil.fr</a>
 					</li>
 													<li>
 						<i class="fa fa-phone-alt"></i>
-						<a href="tel:666-888-0000">666 888 0000</a>
+						<a href="#">0745893216</a>
 					</li>
 										</ul><!-- /.mobile-nav__contact -->
 			<div class="mobile-nav__top">
@@ -879,7 +879,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                 <div class="row">
                                     <div class="col-xl-5 col-lg-7">
                                         <div class="main-slider-two__content">
-											<h2 class="main-slider-two__title">Planifions votre assurance habitation</h2>
+											<h2 class="main-slider-two__title">Bénéficiez de 50% de réduction sur les frais de dossier !</h2>
 
 											<p class="main-slider-two__text">
 												Planifions votre assurance habitation pour vous assurer une protection complète.
@@ -1054,7 +1054,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 																			</div>
 																									<h2 class="section-title__title">Obtenez une assurance fiable &amp; rapide pour tout usage</h2>
 															</div>
-																			<p class="about-two__text">Assurance fiable et rapide pour tous vos besoins. Couverture complète pour voiture, maison, santé et entreprise. Obtenez la tranquillité d'esprit dès maintenant.</p>
+																			<p class="about-two__text">Assurance fiable, rapide et moins cher pour tous vos besoins. Couverture complète pour voiture, maison, santé et entreprise. Obtenez la tranquillité d'esprit dès maintenan</p>
 																			<ul class="list-unstyled about-two__points ml-0">
 																	<li>
 										<div class="icon insur-icon-svg">
@@ -1462,7 +1462,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                 <div class="cta-one__call-icon insur-svg-large">
                                     <i aria-hidden="true" class="fas fa-phone"></i>                                </div>
                                 <div class="cta-one__call-number">
-                                    <a href="#">0745893083 / 0745893216</a>
+                                    <a href="#"> 0745893216</a>
                                     <p>Appel à nos experts</p>
                                 </div>
                             </div>
@@ -1529,8 +1529,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 
                                                                     <div class="swiper-slide">
                                                                                     <img loading="lazy" decoding="async" width="167" height="80" src="{{asset('images/1.png')}}" class="attachment-insur_brand_logo_167X80 size-insur_brand_logo_167X80" alt="alt" />                                                                            </div><!-- /.swiper-slide -->
-                                                                    <div class="swiper-slide">
-                                                                                    <img loading="lazy" decoding="async" width="167" height="80" src="{{asset('images/2.png')}}" class="attachment-insur_brand_logo_167X80 size-insur_brand_logo_167X80" alt="alt" />                                                                            </div><!-- /.swiper-slide -->
+
                                                                     <div class="swiper-slide">
                                                                                     <img loading="lazy" decoding="async" width="167" height="80" src="{{asset('images/3.png')}}" class="attachment-insur_brand_logo_167X80 size-insur_brand_logo_167X80" alt="alt" />                                                                            </div><!-- /.swiper-slide -->
                                                                     <div class="swiper-slide">
@@ -1682,12 +1681,24 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                                     </div>
                                                                     <div class="get-insurance__input-box">
                                                                         <span class="" data-name="email-54">
-                                                                            <input id="Email" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email-54" disabled/>
+                                                                            <input id="phone" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Télephone" value="" type="text"  />
                                                                         </span>
                                                                     </div>
                                                                     <div class="get-insurance__input-box">
                                                                         <span class="" data-name="email-54">
-                                                                            <input id="phone" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Télephone" value="" type="text"  />
+                                                                            <input id="Email" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email-54" />
+                                                                        </span>
+                                                                    </div>
+
+
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="datenaissance" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Date naissance" value="" type="text"  />
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="codePostal" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Code postal" value="" type="text"  />
                                                                         </span>
                                                                     </div>
 
@@ -1725,7 +1736,8 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 <p style="border:1px solid #a9c8ea;padding:5px;margin-bottom:5px;border-radius:10px;font-family:sans-serif;font-size:0.7rem">
     On cliquant sur le bouton "Envoyer", vous acceptez d'être contacté(e) par téléphone ou par e-mail par
     les partenaires assureurs Hpro Conseil proposant les meilleures offres répondant à vos besoins.</p>
-<p>    <button type="submit" class="thm-btn get-insurance__btn" id="btnSubmit">Envoyer</button>
+<p>    {{-- <button type="submit" class="thm-btn get-insurance__btn" id="btnSubmit">Envoyer</button> --}}
+    <a href="#" class="thm-btn get-insurance__btn" id="btnSubmit">Envoyer</a>
 </div>
 
 {{-- <div class="wpcf7-response-output" aria-hidden="true"></div> --}}
@@ -1740,40 +1752,23 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
         background-color: #a9c8ea3d;
         border-radius: 10px;
     }
+    #datenaissance
+    {
+        padding: 15px;
+        width: 29.5rem;
+        background-color: #a9c8ea3d;
+        border-radius: 10px;
+    }
+
 </style>
 <script>
     $(document).ready(function () {
 
-        $('#TypeAssurance').on('change',function()
+
+        $('#btnSubmit').on('click',function(e)
         {
-            var value = $(this).val();
-            if(value == 'Auto')
-            {
-                $('#Email').val('leadsautohproconseil@gmail.com');
-            }
-            if(value == 'Habitation')
-            {
-                $('#Email').val('leadshabitationhproconseil@gmail.com');
-            }
-            if(value == 'Multuelle santé')
-            {
-                $('#Email').val('leadssantehproconseil@gmail.com');
-            }
-            if(value == 'RC décennale')
-            {
-                $('#Email').val('leadsdecennalehproconseil@gmail.com');
-            }
-            if(value == 'Emprunteur')
-            {
-                $('#Email').val('leadsemprunteurhproconseil@gmail.com');
-            }
-            if(value == 0)
-            {
-                $('#Email').val('');
-            }
-        });
-        $('#btnSubmit').on('click',function()
-        {
+            e.preventDefault();
+
             if($('#Fullname').val() == '')
             {
                 Swal.fire({
@@ -1813,6 +1808,9 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                         Email    : $('#Email').val(),
                         TypeAssurance : $('#TypeAssurance').val(),
                         phone         : $('#phone').val(),
+                        datenaissance : $('#datenaissance').val(),
+                        codepostal : $('#codePostal').val(),
+                        page         : 'welcome',
                     },
                     dataType: "json",
                     beforeSend: function() {
@@ -1832,6 +1830,8 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                             $('#Email').val('');
                             $('#TypeAssurance').val(0);
                             $('#phone').val('');
+                            $('#datenaissance').val('');
+                            $('#codePostal').val('');
                         }
                     },
                     error: function(xhr, status, error) {
@@ -2613,7 +2613,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 				<div class="footer-widget__phone-icon">
 					<span aria-hidden="true" class="fa-solid fa-phone"></span>				</div>
 				<div class="footer-widget__phone-text">
-					<a href="tel:9200368090">0745893083 / 0745893216</a>
+					<a href="tel:9200368090"> 0745893216</a>
 					<p>Appel à nos experts </p>
 				</div>
 			</div>
@@ -2657,11 +2657,11 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 var yith_wcwl_l10n = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","yith_wcwl_button_position":"after_add_to_cart","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"","ajax_loader_url":"https:\/\/bracketweb.com\/insurwp\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","is_wishlist_responsive":"1","time_to_close_prettyphoto":"3000","fragments_index_glue":".","reload_on_found_variation":"1","mobile_media_query":"768","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","save_title_action":"save_title","save_privacy_action":"save_privacy","load_fragments":"load_fragments"},"nonce":{"add_to_wishlist_nonce":"9750f0f347","remove_from_wishlist_nonce":"d714bf0d0e","reload_wishlist_and_adding_elem_nonce":"3c3f42f10a","load_mobile_nonce":"f7a16f5191","delete_item_nonce":"648b4281dc","save_title_nonce":"0329e05f16","save_privacy_nonce":"9f79a24d4d","load_fragments_nonce":"16a9f5d62c"},"redirect_after_ask_estimate":"","ask_estimate_redirect_url":"https:\/\/bracketweb.com\/insurwp"};
 </script>
 <script src="https://bracketweb.com/insurwp/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.31.0" id="jquery-yith-wcwl-js"></script>
-<script src="https://bracketweb.com/insurwp/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.2" id="swv-js"></script>
-<script id="contact-form-7-js-extra">
+{{-- <script src="https://bracketweb.com/insurwp/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.2" id="swv-js"></script> --}}
+{{-- <script id="contact-form-7-js-extra">
 var wpcf7 = {"api":{"root":"https:\/\/bracketweb.com\/insurwp\/wp-json\/","namespace":"contact-form-7\/v1"}};
-</script>
-<script src="https://bracketweb.com/insurwp/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.2" id="contact-form-7-js"></script>
+</script> --}}
+{{-- <script src="https://bracketweb.com/insurwp/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.2" id="contact-form-7-js"></script> --}}
 <script src="https://bracketweb.com/insurwp/wp-content/plugins/layerdrops-toolbar/assets/js/jQuery.style.switcher.min.js?ver=1714419073" id="jquery-style-switcher-js"></script>
 <script src="https://bracketweb.com/insurwp/wp-content/plugins/layerdrops-toolbar/assets/js/color-switcher.js?ver=1714419073" id="layerdrops-toolbar-color-switcher-js"></script>
 <script src="https://bracketweb.com/insurwp/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=8.7.0" id="sourcebuster-js-js"></script>

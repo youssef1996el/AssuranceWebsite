@@ -131,6 +131,258 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 
 <body class="page-template page-template-elementor_header_footer page page-id-45 theme-insur woocommerce-no-js custom-cursor woocommerce-active elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-45">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .AllSrean
+        {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+         }
+
+         .containerSpinner
+         {
+             left: 50%;
+             margin: auto -50px;
+             position: absolute;
+             top: 50%;
+         }
+
+         .swing div {
+         border-radius: 50%;
+         float: left;
+         height: 1em;
+         width: 1em;
+         }
+
+         .swing div:nth-of-type(1) {
+         background: -webkit-linear-gradient(left, #385c78 0%, #325774 100%);
+         background: linear-gradient(to right, #385c78 0%, #325774 100%);
+         }
+
+         .swing div:nth-of-type(2) {
+         background: -webkit-linear-gradient(left, #325774 0%, #47536a 100%);
+         background: linear-gradient(to right, #325774 0%, #47536a 100%);
+         }
+
+         .swing div:nth-of-type(3) {
+         background: -webkit-linear-gradient(left, #4a5369 0%, #6b4d59 100%);
+         background: linear-gradient(to right, #4a5369 0%, #6b4d59 100%);
+         }
+
+         .swing div:nth-of-type(4) {
+         background: -webkit-linear-gradient(left, #744c55 0%, #954646 100%);
+         background: linear-gradient(to right, #744c55 0%, #954646 100%);
+         }
+
+         .swing div:nth-of-type(5) {
+         background: -webkit-linear-gradient(left, #9c4543 0%, #bb4034 100%);
+         background: linear-gradient(to right, #9c4543 0%, #bb4034 100%);
+         }
+
+         .swing div:nth-of-type(6) {
+         background: -webkit-linear-gradient(left, #c33f31 0%, #d83b27 100%);
+         background: linear-gradient(to right, #c33f31 0%, #d83b27 100%);
+         }
+
+         .swing div:nth-of-type(7) {
+         background: -webkit-linear-gradient(left, #da3b26 0%, #db412c 100%);
+         background: linear-gradient(to right, #da3b26 0%, #db412c 100%);
+         }
+
+         .shadowSpinner {
+         clear: left;
+         padding-top: 1.5em;
+         }
+
+         .shadowSpinner div {
+         -webkit-filter: blur(1px);
+         filter: blur(1px);
+         float: left;
+         width: 1em;
+         height: .25em;
+         border-radius: 50%;
+         background: #e3dbd2;
+         }
+
+         .shadowSpinner .shadow-l {
+         background: #d5d8d6;
+         }
+
+         .shadowSpinner .shadow-r {
+         background: #eed3ca;
+         }
+
+         @-webkit-keyframes ball-l53 {
+         0%, 50% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0);
+         }
+
+         100% {
+             -webkit-transform: rotate(50deg) translateX(-2.5em);
+             transform: rotate(50deg) translateX(-2.5em);
+         }
+         }
+
+         @keyframes ball-l53 {
+         0%, 50% {
+             -webkit-transform: rotate(0) translate(0);
+             transform: rotate(0) translateX(0);
+         }
+
+         100% {
+             -webkit-transform: rotate(50deg) translateX(-2.5em);
+             transform: rotate(50deg) translateX(-2.5em);
+         }
+         }
+
+         @-webkit-keyframes ball-r53 {
+         0% {
+             -webkit-transform: rotate(-50deg) translateX(2.5em);
+             transform: rotate(-50deg) translateX(2.5em);
+         }
+
+         50%,
+         100% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0);
+         }
+         }
+
+         @keyframes ball-r53 {
+         0% {
+             -webkit-transform: rotate(-50deg) translateX(2.5em);
+             transform: rotate(-50deg) translateX(2.5em);
+         }
+
+         50%,
+         100% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0)
+         }
+         }
+
+         @-webkit-keyframes shadow-l-n53 {
+         0%, 50% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+
+         100% {
+             opacity: .125;
+             -webkit-transform: translateX(-1.57em);
+             transform: translateX(-1.75em);
+         }
+         }
+
+         @keyframes shadow-l-n53 {
+         0%, 50% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+
+         100% {
+             opacity: .125;
+             -webkit-transform: translateX(-1.75);
+             transform: translateX(-1.75em);
+         }
+         }
+
+         @-webkit-keyframes shadow-r-n53 {
+         0% {
+             opacity: .125;
+             -webkit-transform: translateX(1.75em);
+             transform: translateX(1.75em);
+         }
+
+         50%,
+         100% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+         }
+
+         @keyframes shadow-r-n53 {
+         0% {
+             opacity: .125;
+             -webkit-transform: translateX(1.75em);
+             transform: translateX(1.75em);
+         }
+
+         50%,
+         100% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+         }
+
+         .swing-l {
+         -webkit-animation: ball-l53 .425s ease-in-out infinite alternate;
+         animation: ball-l53 .425s ease-in-out infinite alternate;
+         }
+
+         .swing-r {
+         -webkit-animation: ball-r53 .425s ease-in-out infinite alternate;
+         animation: ball-r53 .425s ease-in-out infinite alternate;
+         }
+
+         .shadow-l {
+         -webkit-animation: shadow-l-n53 .425s ease-in-out infinite alternate;
+         animation: shadow-l-n53 .425s ease-in-out infinite alternate;
+         }
+
+         .shadow-r {
+         -webkit-animation: shadow-r-n53 .425s ease-in-out infinite alternate;
+         animation: shadow-r-n53 .425s ease-in-out infinite alternate;
+         }
+     </style>
+      <script>
+         // Function to hide the AllSrean div
+         function hideAllSrean() {
+         setTimeout(function() {
+             document.querySelector('.AllSrean').style.display = 'none';
+         }, 1000); // 5000 milliseconds = 5 seconds
+     }
+
+     // Add event listener to window load event
+     window.addEventListener('load', hideAllSrean);
+     </script>
+     <div class="AllSrean">
+        <div aria-busy="true" aria-label="Loading" role="progressbar" class="containerSpinner">
+            <div class="swing">
+                <div class="swing-l"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="swing-r"></div>
+            </div>
+            <div class="shadowSpinner">
+                <div class="shadow-l"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="shadow-r"></div>
+            </div>
+        </div>
+    </div>
     <div class="custom-cursor__cursor"></div>
             <div class="custom-cursor__cursor-two"></div>
 
@@ -477,10 +729,10 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 </ul></div>								</div>
 								<div class="main-menu__main-menu-box-search-get-quote-btn">
 
-									<div class="main-menu__main-menu-box-search">
+									{{-- <div class="main-menu__main-menu-box-search"> --}}
 																					{{-- <a href="#" class="main-menu__search search-toggler fa-solid fa-magnifying-glass"></a> --}}
 
-																			</div>
+																			{{-- </div> --}}
 
 																			<div class="main-menu__main-menu-box-get-quote-btn-box">
 											<a   href="{{url('Contant')}}" class="thm-btn main-menu__main-menu-box-get-quote-btn">Commencer</a>
@@ -493,7 +745,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 								<div class="main-menu__call-icon insur-icon-svg">
 									<i aria-hidden="true" class="fas fa-phone"></i>								</div>
 																	<div class="main-menu__call-content">
-																					<a href="tel:9200368090"> 0745893083 / 0745893216</a>
+																					<a href="tel:9200368090">0745893216</a>
 																															<p>Appel à nos experts</p>
 																			</div>
 															</div>
@@ -527,9 +779,9 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 	<div class="mobile-nav__content">
 		<span class="mobile-nav__close mobile-nav__toggler"></span>
 
-		<div class="logo-box">
-			<a href="https://bracketweb.com/insurwp/">
-				<img loading="lazy" decoding="async" width="143" height="27" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/logo-light.png" id="mobile-thm-logo" alt="Insur">
+		<div class="logo-box" style="background-color: #fff !important">
+			<a href="{{url('/')}}">
+				<img loading="lazy" decoding="async" width="143" height="27" src="{{asset('images/conseil.png')}}" id="mobile-thm-logo" alt="Insur">
 			</a>
 		</div>
 		<!-- /.logo-box -->
@@ -538,11 +790,11 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 					<ul class="mobile-nav__contact list-unstyled ml-0">
 									<li>
 						<i class="fa fa-envelope"></i>
-						<a href="needhelp@insur.com">needhelp@insur.com</a>
+						<a href="#">contact@hproconseil.fr</a>
 					</li>
 													<li>
 						<i class="fa fa-phone-alt"></i>
-						<a href="tel:666-888-0000">666 888 0000</a>
+						<a href="#">0745893216</a>
 					</li>
 										</ul><!-- /.mobile-nav__contact -->
 			<div class="mobile-nav__top">
@@ -640,7 +892,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                     <h2 class="insurance-details__need-help-title">
                         Parlez à votre <br> agent d'assurance          </h2>
                 <div class="insurance-details__need-help-contact">
-            <a href="tel:+9200368090">0745893083 / 0745893216</a>
+            <a href="tel:+9200368090">0745893216</a>
                             <p> Appel à nos experts</p>
                     </div>
     </div>
@@ -739,9 +991,310 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-33b7c5cb elementor-widget elementor-widget-insur-call-to-action" data-id="33b7c5cb" data-element_type="widget" data-widget_type="insur-call-to-action.default">
 				<div class="elementor-widget-container">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-61e1b12f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="61e1b12f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-32e17bb" data-id="32e17bb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-33b7c5cb elementor-widget elementor-widget-insur-call-to-action" data-id="33b7c5cb" data-element_type="widget" data-widget_type="insur-call-to-action.default">
+				<div class="elementor-widget-container">
 
+                    <!-- check form -->
+                    <section class="get-insuracne-two">
+                    <div class="get-insuracne-two-shape-3 float-bob-x">
+                <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-3.png" alt="alt">
+            </div>
+                <div class="container">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="get-insuracne-two__left">
+                        <div class="get-insuracne-two__shape-box">
+                                                            <div class="get-insuracne-two-shape-1" style="background-image: url(https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-1.png);"></div>
+                                                                                        <div class="get-insuracne-two-shape-2">
+                                    <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-shape-2.png" alt="alt">
+                                </div>
+                                                    </div>
+                                                    <div class="get-insuracne-two__img">
+                                <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insurance-two-img-1.jpg" alt="alt" style="width: 100%; border-radius: 50%">
+                            </div>
+                                            </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="get-insuracne-two__right">
+                                                    <div class="section-title text-left">
+                                                                    <div class="section-sub-title-box">
+                                        <p class="section-sub-title">
+
+</p>
+                                                                                    <div class="section-title-shape-1">
+                                                <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/section-title-shape-1.png" alt="55">
+                                            </div>
+                                                                                                                            <div class="section-title-shape-2">
+                                                <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/section-title-shape-2.png" alt="56">
+                                            </div>
+                                                                            </div>
+                                                                                                    <h2 class="section-title__title">Obtenez un devis d'assurance <br> pour commencer!</h2>
+                                                            </div>
+                                                <div class="get-insuracne-two__tab clearfix">
+                            <div class="get-insuracne-two__tab-box tabs-box clearfix">
+                                <div class="get-insuracne-two__inner clearfix">
+                                    <div class="get-insuracne-two__tab-left">
+                                        <ul class="tab-buttons clearfix list-unstyled ml-0">
+                                            {{-- <li data-tab="#Home__insurance" class="tab-btn active-btn">
+                                                <div class="get-insuracne-two__tab-btn-content">
+                                                    <div class="get-insuracne-two__tab-icon">
+                                                        <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-1.png" alt="199">
+                                                    </div>
+                                                    <div class="get-insuracne-two__tab-text-box">
+                                                        <p class="get-insuracne-two__tab-text">Assurance <br> habitation</p>
+                                                    </div>
+                                                </div>
+                                            </li> --}}
+                                            <li data-tab="#Vehicles___insurance" >
+                                                <div class="get-insuracne-two__tab-btn-content">
+                                                    <div class="get-insuracne-two__tab-icon">
+                                                        <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-2.png" alt="200">
+                                                    </div>
+                                                    <div class="get-insuracne-two__tab-text-box">
+                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  véhicules</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            {{-- <li data-tab="#Life__insurance" class="tab-btn ">
+                                                <div class="get-insuracne-two__tab-btn-content">
+                                                    <div class="get-insuracne-two__tab-icon">
+                                                        <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-3.png" alt="201">
+                                                    </div>
+                                                    <div class="get-insuracne-two__tab-text-box">
+                                                        <p class="get-insuracne-two__tab-text">Assurance-vie<br> </p>
+                                                    </div>
+                                                </div>
+                                            </li> --}}
+                                            {{-- <li data-tab="#Business__insurance" class="tab-btn ">
+                                                <div class="get-insuracne-two__tab-btn-content">
+                                                    <div class="get-insuracne-two__tab-icon">
+                                                        <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-4.png" alt="202">
+                                                    </div>
+                                                    <div class="get-insuracne-two__tab-text-box">
+                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  véhicules</p>
+                                                    </div>
+                                                </div>
+                                            </li> --}}
+                                        </ul>
+                                    </div>
+                                    <div class="get-insuracne-two__tab-right">
+                                        <div class="tabs-content">
+                                            <!--tab-->
+                                            <div class="tab active-tab" id="Home__insurance">
+                                                <div class="get-insuracne-two__content">
+                                                    <div class="wpcf7 no-js" id="wpcf7-f101-p139-o1" lang="en-US" dir="ltr">
+                                                        <div class="screen-reader-response">
+                                                            <p role="status" aria-live="polite" aria-atomic="true">
+                                                                <ul></ul>
+                                                        </div>
+                                                        <form action="/insurwp/home-two/#wpcf7-f101-p139-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                                            <div style="display: none;">
+                                                                <input type="hidden" name="_wpcf7" value="101" />
+                                                                <input type="hidden" name="_wpcf7_version" value="5.9.2" />
+                                                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f101-p139-o1" />
+                                                                <input type="hidden" name="_wpcf7_container_post" value="139" />
+                                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                                            </div>
+                                                            <div class="get-insurance__form">
+                                                                <div class="get-insurance__content-box">
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="wpcf7-form-control-wrap" data-name="text-760">
+                                                                            <input id="Fullname" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nom et prénom" value="" type="text" name="text-760" />
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="phone" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Télephone" value="" type="text"  />
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="Email" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email-54" />
+                                                                        </span>
+                                                                    </div>
+
+
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="datenaissance" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Date naissance" value="" type="text"  />
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="get-insurance__input-box">
+                                                                        <span class="" data-name="email-54">
+                                                                            <input id="codePostal" size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Code postal" value="" type="text"  />
+                                                                        </span>
+                                                                    </div>
+
+                                                                   {{--  <div class="get-insurance__input-box">
+
+                                                                            <select class=" " id="TypeAssurance" >
+                                                                                <option value="0">Sélectionnez le type d'assurance</option>
+                                                                                <option value="Auto">Auto</option>
+                                                                                <option value="Habitation">Habitation</option>
+                                                                                <option value="Multuelle santé">Multuelle santé</option>
+                                                                                <option value="RC décennale">RC décennale</option>
+                                                                                <option value="Emprunteur">Emprunteur</option>
+                                                                            </select>
+
+                                                                    </div> --}}
+                                                                    </p>
+                                                                </div>
+                                                    <div class="get-insurance__progress">
+                                                    <div class="get-insurance__progress-single">
+{{-- <h4 class="get-insurance__progress-title">Limites d'équilibre :
+			</h4> --}}
+{{-- <div class="get-insurance__progress-range">
+				<input type="text" class="balance-range-slider"
+					data-hide-min-max="true" data-step="100"
+					data-from="70000" data-min="0" data-max="90000"
+					value="" /></p>
+<div class="get-insurance__balance-box">
+<p class="get-insurance__balance">$<span></span></p>
+</p></div>
+<p><input class="wpcf7-form-control wpcf7-hidden get-insurance__balance__input" value="" type="hidden" name="your-price" />
+			</div> --}}
+<p><!-- /.get-insurance__progress-range -->
+		</div>
+</p></div>
+<p style="border:1px solid #a9c8ea;padding:5px;margin-bottom:5px;border-radius:10px;font-family:sans-serif;font-size:0.7rem">
+    On cliquant sur le bouton "Envoyer", vous acceptez d'être contacté(e) par téléphone ou par e-mail par
+    les partenaires assureurs Hpro Conseil proposant les meilleures offres répondant à vos besoins.</p>
+<p>    <button type="submit" class="thm-btn get-insurance__btn" id="btnSubmit">Envoyer</button>
+</div>
+
+{{-- <div class="wpcf7-response-output" aria-hidden="true"></div> --}}
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+
+    #datenaissance
+    {
+        padding: 15px;
+        width: 29.5rem;
+        background-color: #a9c8ea3d;
+        border-radius: 10px;
+    }
+
+</style>
+<script>
+    $(document).ready(function () {
+
+
+        $('#btnSubmit').on('click',function()
+        {
+            if($('#Fullname').val() == '')
+            {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "veuillez entrer votre nom complet!",
+
+                });
+            }
+            else if($('#Email').val() == '')
+            {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "veuillez entrer votre email!",
+
+                });
+            }
+           /*  else if($('#TypeAssurance').val() == 0)
+            {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "veuillez sélectionner l'assurance!",
+
+                });
+            } */
+            else
+            {
+
+                $.ajax({
+                    type: "get",
+                    url: "{{route('SendMail')}}",
+                    data:
+                    {
+                        Fullname : $('#Fullname').val(),
+                        Email    : $('#Email').val(),
+                       /*  TypeAssurance : $('#TypeAssurance').val(), */
+                        phone         : $('#phone').val(),
+
+                        datenaissance : $('#datenaissance').val(),
+                        codepostal : $('#codePostal').val(),
+                        page       : 'sante',
+                    },
+                    dataType: "json",
+                    beforeSend: function() {
+                        $('.AllSrean').css('display', 'block');
+                    },
+                    success: function (response) {
+                        if(response.status == 200)
+                        {
+                            Swal.fire({
+                                icon: 'success', // Set the success icon
+                                title: 'Succès!', // Set the title
+
+                                showConfirmButton: false, // Hide the default confirm button
+                                timer: 1500 // Timer for automatic closing
+                            });
+                            $('#Fullname').val('');
+                            $('#Email').val('');
+                            $('#TypeAssurance').val(0);
+                            $('#phone').val('');
+                            $('#datenaissance').val('');
+                            $('#codePostal').val('');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Tasks to be performed if request fails
+                        // For example, showing an error message
+                        console.error('Error:', error);
+                    },
+                    complete: function() {
+                        // Tasks to be performed regardless of success or failure
+                        // For example, hiding a loading spinner
+                        $('.AllSrean').css('display', 'none');
+                    }
+
+                });
+            }
+
+        });
+    });
+</script>
+                                                                                                            </div>
+                                                </div>
+                                                <!--tab-->
+                                                                                            <!--tab-->
+
+                                                <!--tab-->
+                                                                                            <!--tab-->
+
+                                                <!--tab-->
+                                                                                            <!--tab-->
+
+                                                <!--tab-->
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Tracking Start-->
-    <section class="tracking">
+    <section class="tracking mt-3">
         <div class="container">
             <div class="tracking__inner">
                                     <div class="tracking-shape-1 float-bob-y">
@@ -928,7 +1481,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 				<div class="footer-widget__phone-icon">
 					<i class="fa-solid fa-phone-volume"></i>				</div>
 				<div class="footer-widget__phone-text">
-					<a href="tel:9200368090">0745893083 / 0745893216</a>
+					<a href="tel:9200368090">0745893216</a>
 					<p>Appel à nos experts </p>
 				</div>
 			</div>
