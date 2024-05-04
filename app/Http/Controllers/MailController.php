@@ -92,7 +92,7 @@ class MailController extends Controller
 
        /*  $toEmail        = $request->Email; */
         $messageBody    = 'first message';
-        dd($toEmail);
+
 
         $fullname       = $request->Fullname;
         $phone          = $request->phone;
