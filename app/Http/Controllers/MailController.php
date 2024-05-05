@@ -115,7 +115,7 @@ class MailController extends Controller
 
             ],
             function ($message) use ($toEmail, $subject,$phone,$fullname,$codepostal,$matricule,$datenaissance,$emailClient) {
-                $message->to($toEmail)
+                $message->to('elhamrayoussef@gmail.com')
                     ->subject($subject);
             });
 
