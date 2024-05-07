@@ -101,6 +101,7 @@ class MailController extends Controller
         $datenaissance  = $request->datenaissance;
         $emailClient    = $request->Email;
 
+
         Mail::send('Send',
             [
                 'fullname'       => $fullname,
@@ -115,7 +116,7 @@ class MailController extends Controller
 
             ],
             function ($message) use ($toEmail, $subject,$phone,$fullname,$codepostal,$matricule,$datenaissance,$emailClient) {
-                $message->to('elhamrayoussef@gmail.com')
+                $message->to($toEmail)
                     ->subject($subject);
             });
 
@@ -125,5 +126,43 @@ class MailController extends Controller
             'status'   => 200
         ]);
 
+    }
+
+    public function SendMessageContact(Request $request)
+    {
+        try
+        {
+            $fullname       = $request->FullName;
+            $emailClient    = $request->Email;
+            $phone          = $request->Phone;
+            $subject        = $request->Subject;
+            $Message        = $request->Message;
+            $toEmail        = "contact@hproconseil.fr";
+
+            Mail::send('SendContact',
+            [
+
+                'fullname'              => $fullname,
+                'emailClient'           => $emailClient,
+                'phone'                 => $phone,
+                'subject'               => $subject,
+                'Message'               => $Message,
+                'toEmail'               => $toEmail,
+
+            ],
+            function ($message) use ($toEmail, $fullname,$emailClient,$phone,$subject,$Message) {
+                $message->to($toEmail)
+                    ->subject($subject);
+            });
+
+            return response()->json([
+                'status'   => 200
+            ]);
+
+        }
+        catch (\Throwable $th)
+        {
+            throw $th;
+        }
     }
 }

@@ -14,7 +14,7 @@ use App\Http\Controllers\MailController;
 */
 
 Route::get('/', function () {
-    
+
     return view('welcome');
 });
 
@@ -47,3 +47,5 @@ Route::get('Emprunteur',function()
 });
 
 Route::get('SendMail',[MailController::class,'index'])->name('SendMail');
+
+Route::get('SendMailContact',[MailController::class,'SendMessageContact'])->name('SendMailContact');

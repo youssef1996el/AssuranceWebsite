@@ -129,8 +129,261 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 </head>
 
 <body class="page-template page-template-elementor_header_footer page page-id-47 theme-insur woocommerce-no-js custom-cursor woocommerce-active elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-47">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .AllSrean
+        {
+            display: block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+         }
+
+         .containerSpinner
+         {
+             left: 50%;
+             margin: auto -50px;
+             position: absolute;
+             top: 50%;
+         }
+
+         .swing div {
+         border-radius: 50%;
+         float: left;
+         height: 1em;
+         width: 1em;
+         }
+
+         .swing div:nth-of-type(1) {
+         background: -webkit-linear-gradient(left, #385c78 0%, #325774 100%);
+         background: linear-gradient(to right, #385c78 0%, #325774 100%);
+         }
+
+         .swing div:nth-of-type(2) {
+         background: -webkit-linear-gradient(left, #325774 0%, #47536a 100%);
+         background: linear-gradient(to right, #325774 0%, #47536a 100%);
+         }
+
+         .swing div:nth-of-type(3) {
+         background: -webkit-linear-gradient(left, #4a5369 0%, #6b4d59 100%);
+         background: linear-gradient(to right, #4a5369 0%, #6b4d59 100%);
+         }
+
+         .swing div:nth-of-type(4) {
+         background: -webkit-linear-gradient(left, #744c55 0%, #954646 100%);
+         background: linear-gradient(to right, #744c55 0%, #954646 100%);
+         }
+
+         .swing div:nth-of-type(5) {
+         background: -webkit-linear-gradient(left, #9c4543 0%, #bb4034 100%);
+         background: linear-gradient(to right, #9c4543 0%, #bb4034 100%);
+         }
+
+         .swing div:nth-of-type(6) {
+         background: -webkit-linear-gradient(left, #c33f31 0%, #d83b27 100%);
+         background: linear-gradient(to right, #c33f31 0%, #d83b27 100%);
+         }
+
+         .swing div:nth-of-type(7) {
+         background: -webkit-linear-gradient(left, #da3b26 0%, #db412c 100%);
+         background: linear-gradient(to right, #da3b26 0%, #db412c 100%);
+         }
+
+         .shadowSpinner {
+         clear: left;
+         padding-top: 1.5em;
+         }
+
+         .shadowSpinner div {
+         -webkit-filter: blur(1px);
+         filter: blur(1px);
+         float: left;
+         width: 1em;
+         height: .25em;
+         border-radius: 50%;
+         background: #e3dbd2;
+         }
+
+         .shadowSpinner .shadow-l {
+         background: #d5d8d6;
+         }
+
+         .shadowSpinner .shadow-r {
+         background: #eed3ca;
+         }
+
+         @-webkit-keyframes ball-l53 {
+         0%, 50% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0);
+         }
+
+         100% {
+             -webkit-transform: rotate(50deg) translateX(-2.5em);
+             transform: rotate(50deg) translateX(-2.5em);
+         }
+         }
+
+         @keyframes ball-l53 {
+         0%, 50% {
+             -webkit-transform: rotate(0) translate(0);
+             transform: rotate(0) translateX(0);
+         }
+
+         100% {
+             -webkit-transform: rotate(50deg) translateX(-2.5em);
+             transform: rotate(50deg) translateX(-2.5em);
+         }
+         }
+
+         @-webkit-keyframes ball-r53 {
+         0% {
+             -webkit-transform: rotate(-50deg) translateX(2.5em);
+             transform: rotate(-50deg) translateX(2.5em);
+         }
+
+         50%,
+         100% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0);
+         }
+         }
+
+         @keyframes ball-r53 {
+         0% {
+             -webkit-transform: rotate(-50deg) translateX(2.5em);
+             transform: rotate(-50deg) translateX(2.5em);
+         }
+
+         50%,
+         100% {
+             -webkit-transform: rotate(0) translateX(0);
+             transform: rotate(0) translateX(0)
+         }
+         }
+
+         @-webkit-keyframes shadow-l-n53 {
+         0%, 50% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+
+         100% {
+             opacity: .125;
+             -webkit-transform: translateX(-1.57em);
+             transform: translateX(-1.75em);
+         }
+         }
+
+         @keyframes shadow-l-n53 {
+         0%, 50% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+
+         100% {
+             opacity: .125;
+             -webkit-transform: translateX(-1.75);
+             transform: translateX(-1.75em);
+         }
+         }
+
+         @-webkit-keyframes shadow-r-n53 {
+         0% {
+             opacity: .125;
+             -webkit-transform: translateX(1.75em);
+             transform: translateX(1.75em);
+         }
+
+         50%,
+         100% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+         }
+
+         @keyframes shadow-r-n53 {
+         0% {
+             opacity: .125;
+             -webkit-transform: translateX(1.75em);
+             transform: translateX(1.75em);
+         }
+
+         50%,
+         100% {
+             opacity: .5;
+             -webkit-transform: translateX(0);
+             transform: translateX(0);
+         }
+         }
+
+         .swing-l {
+         -webkit-animation: ball-l53 .425s ease-in-out infinite alternate;
+         animation: ball-l53 .425s ease-in-out infinite alternate;
+         }
+
+         .swing-r {
+         -webkit-animation: ball-r53 .425s ease-in-out infinite alternate;
+         animation: ball-r53 .425s ease-in-out infinite alternate;
+         }
+
+         .shadow-l {
+         -webkit-animation: shadow-l-n53 .425s ease-in-out infinite alternate;
+         animation: shadow-l-n53 .425s ease-in-out infinite alternate;
+         }
+
+         .shadow-r {
+         -webkit-animation: shadow-r-n53 .425s ease-in-out infinite alternate;
+         animation: shadow-r-n53 .425s ease-in-out infinite alternate;
+         }
+     </style>
+      <script>
+         // Function to hide the AllSrean div
+         function hideAllSrean() {
+         setTimeout(function() {
+             document.querySelector('.AllSrean').style.display = 'none';
+         }, 1000); // 5000 milliseconds = 5 seconds
+     }
+
+     // Add event listener to window load event
+     window.addEventListener('load', hideAllSrean);
+     </script>
+     <div class="AllSrean">
+        <div aria-busy="true" aria-label="Loading" role="progressbar" class="containerSpinner">
+            <div class="swing">
+                <div class="swing-l"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="swing-r"></div>
+            </div>
+            <div class="shadowSpinner">
+                <div class="shadow-l"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="shadow-r"></div>
+            </div>
+        </div>
+    </div>
     <div class="custom-cursor__cursor"></div>
             <div class="custom-cursor__cursor-two"></div>
 
@@ -656,7 +909,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 <p role="status" aria-live="polite" aria-atomic="true">
 <ul></ul>
 </div>
-<form action="/insurwp/contact/#wpcf7-f453-p47-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<form action="" method="get" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="453" />
 <input type="hidden" name="_wpcf7_version" value="5.9.2" />
@@ -667,40 +920,46 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 </div>
 <div  class="comment-one__form contact-form-validated">
 <div class="row">
+    <div class="col-xl-6">
+        <div class="comment-form__input-box">
+            <span class="wpcf7-form-control-wrap" data-name="text-927">
+                <input id="Fullname" size="40" class="" aria-required="true" aria-invalid="false" placeholder="Votre nom" value="" type="text" name="text-927" />
+            </span>
+        </div>
+</p></div>
 <div class="col-xl-6">
 <div class="comment-form__input-box">
-                    <span class="wpcf7-form-control-wrap" data-name="text-927"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Votre nom" value="" type="text" name="text-927" /></span>
+                    <span class="wpcf7-form-control-wrap" data-name="email-322">
+                        <input id="Email" size="40" class="" aria-required="true" aria-invalid="false" placeholder="Adresse e-mail" value="" type="email" name="email-322" /></span>
                 </div>
 </p></div>
 <div class="col-xl-6">
 <div class="comment-form__input-box">
-                    <span class="wpcf7-form-control-wrap" data-name="email-322"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Adresse e-mail" value="" type="email" name="email-322" /></span>
+                    <span class="wpcf7-form-control-wrap" data-name="text-927">
+                        <input id="phone" size="40" class="" aria-required="true" aria-invalid="false" placeholder="Numéro de téléphone" value="" type="text" name="text-927" /></span>
                 </div>
 </p></div>
 <div class="col-xl-6">
 <div class="comment-form__input-box">
-                    <span class="wpcf7-form-control-wrap" data-name="text-927"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Numéro de téléphone" value="" type="text" name="text-927" /></span>
-                </div>
-</p></div>
-<div class="col-xl-6">
-<div class="comment-form__input-box">
-                     <span class="wpcf7-form-control-wrap" data-name="text-9274"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Sujet" value="" type="text" name="text-9274" /></span>
+                     <span class="wpcf7-form-control-wrap" data-name="text-9274">
+                        <input id="subject" size="40" class="" aria-required="true" aria-invalid="false" placeholder="Sujet" value="" type="text" name="text-9274" /></span>
                 </div>
 </p></div>
 </p></div>
 <div class="row">
 <div class="col-xl-12">
 <div class="comment-form__input-box text-message-box">
-                    <span class="wpcf7-form-control-wrap" data-name="textarea-512"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message" name="textarea-512"></textarea></span>
+                    <span class="wpcf7-form-control-wrap" data-name="textarea-512">
+                        <textarea id="Message" cols="40" rows="10" class="" aria-required="true" aria-invalid="false" placeholder="Message" name="textarea-512"></textarea></span>
                 </div>
 <div class="comment-form__btn-box">
-                    <button type="submit" class="thm-btn comment-form__btn">Envoyer un
+                    <button type="button" class="thm-btn comment-form__btn" id="Btn_Envoyer">Envoyer un
                         Message</button>
                 </div>
 </p></div>
 </p></div>
 </p></div>
-<div class="wpcf7-response-output" aria-hidden="true"></div>
+
 </form>
 </div>
                                                     </div>
@@ -709,6 +968,83 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
             </div>
         </div>
     </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $('#Btn_Envoyer').on('click',function(e)
+            {
+                e.preventDefault();
+
+                var FullName = $('#Fullname').val();
+                var Email    = $('#Email').val();
+                var Phone    = $('#phone').val();
+                var Subject  = $('#subject').val();
+                var Message  = $('#Message').val();
+                if (FullName === "" || Email === "" || Phone === "" || Subject === "" || Message === "") {
+                    $.notify('Veuillez remplir tous les champs.',
+                    {
+                        position: "bottom right",
+                        className: "error",
+                        autoHideDelay: 5000
+                    });
+                    return false;
+
+                }
+
+                $.ajax({
+                    type: "get",
+                    url: "{{route('SendMailContact')}}",
+                    data:
+                    {
+                        FullName : FullName,
+                        Email    : Email,
+                        Phone    : Phone,
+                        Subject  : Subject,
+                        Message  : Message,
+                    },
+                    dataType: "json",
+                    beforeSend: function()
+                    {
+                        $('.AllSrean').css({
+                            'display': 'block',
+                            'background-color': 'rgba(255, 255, 255, 0.66)'
+                        });
+                    },
+                    success: function (response)
+                    {
+                        if(response.status == 200)
+                        {
+                            Swal.fire({
+                                icon: 'success', // Set the success icon
+                                title: 'Succès!', // Set the title
+                                showConfirmButton: false, // Hide the default confirm button
+                                timer: 1500 // Timer for automatic closing
+                            });
+                            $('#Fullname').val('');
+                            $('#Email').val('');
+                            $('#phone').val('');
+                            $('#subject').val('');
+                            $('#Message').val('');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Tasks to be performed if request fails
+                        // For example, showing an error message
+                        console.error('Error:', error);
+                    },
+                    complete: function() {
+                        // Tasks to be performed regardless of success or failure
+                        // For example, hiding a loading spinner
+                        $('.AllSrean').css('display', 'none');
+                    }
+                });
+            });
+
+        });
+    </script>
     <!--Contact Page End-->
 		</div>
 				</div>
@@ -858,37 +1194,37 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                 <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-1.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-2.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-3.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-4.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-5.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-6.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     </ul>

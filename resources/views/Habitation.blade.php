@@ -117,7 +117,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
 <link rel="https://api.w.org/" href="https://bracketweb.com/insurwp/wp-json/" /><link rel="alternate" type="application/json" href="https://bracketweb.com/insurwp/wp-json/wp/v2/pages/45" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bracketweb.com/insurwp/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.5.2" />
 <meta name="generator" content="WooCommerce 8.7.0" />
-<link rel="canonical" href="https://bracketweb.com/insurwp/car-insurance/" />
+<link rel="canonical" href="#" />
 <link rel='shortlink' href='https://bracketweb.com/insurwp/?p=45' />
 <link rel="alternate" type="application/json+oembed" href="https://bracketweb.com/insurwp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbracketweb.com%2Finsurwp%2Fcar-insurance%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://bracketweb.com/insurwp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbracketweb.com%2Finsurwp%2Fcar-insurance%2F&#038;format=xml" />
@@ -861,7 +861,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
         <meta property="position" content="1">
     </span>
 </li>
-<li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Habitation</span><meta property="url" content="https://bracketweb.com/insurwp/car-insurance/"><meta property="position" content="2"></span></li>
+<li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Habitation</span><meta property="url" content="#"><meta property="position" content="2"></span></li>
 				</ul>
 									<h2>
 									Habitation							</h2>
@@ -1445,37 +1445,37 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                 <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-1.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-2.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-3.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-4.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-5.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     <li>
                         <div class="footer-widget__gallery-img">
                             <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/footer-widget-gallery-img-6.jpg" alt="alt">
-                            <a target=_blank href="https://bracketweb.com/insurwp/car-insurance/"><span class="fa fa-link"></span></a>
+                            <a  href="#"><span class="fa fa-link"></span></a>
                         </div>
                     </li>
                                     </ul>
