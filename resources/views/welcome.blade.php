@@ -1621,7 +1621,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                     </div>
                                                 </div>
                                             </li> --}}
-                                            <li data-tab="#Vehicles___insurance" >
+                                            {{-- <li data-tab="#Vehicles___insurance" >
                                                 <div class="get-insuracne-two__tab-btn-content">
                                                     <div class="get-insuracne-two__tab-icon">
                                                         <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-2.png" alt="200">
@@ -1630,7 +1630,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                         <p class="get-insuracne-two__tab-text">Assurance  <br>  véhicules</p>
                                                     </div>
                                                 </div>
-                                            </li>
+                                            </li> --}}
                                             {{-- <li data-tab="#Life__insurance" class="tab-btn ">
                                                 <div class="get-insuracne-two__tab-btn-content">
                                                     <div class="get-insuracne-two__tab-icon">

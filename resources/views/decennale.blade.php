@@ -1050,8 +1050,8 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                     <div class="get-insuracne-two__tab-icon">
                                                         <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-2.png" alt="200">
                                                     </div>
-                                                    <div class="get-insuracne-two__tab-text-box">
-                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  véhicules</p>
+                                                    <div class="get-insuracne-two__tab-text-box" >
+                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  RC décennale</p>
                                                     </div>
                                                 </div>
                                             </li>

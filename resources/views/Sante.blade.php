@@ -1055,7 +1055,7 @@ var woocommerce_params = {"ajax_url":"\/insurwp\/wp-admin\/admin-ajax.php","wc_a
                                                         <img decoding="async" src="https://bracketweb.com/insurwp/wp-content/uploads/2022/07/get-insuracne-two-tab-icon-2.png" alt="200">
                                                     </div>
                                                     <div class="get-insuracne-two__tab-text-box">
-                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  véhicules</p>
+                                                        <p class="get-insuracne-two__tab-text">Assurance  <br>  Mutuelle Santé</p>
                                                     </div>
                                                 </div>
                                             </li>
